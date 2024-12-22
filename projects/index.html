@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BANGOLAND</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>BANGOLAND - SEASON 01</h1>
+
+    <img class="topright" src="../images/dance-tr2.gif" alt="Gears" />
+
+    <img class="bottomleft" src="../images/dance-bl.gif" alt="Gears" />
+
+    <aside id="desktop">
+      <img src="../images/BANGLOANDLOGO01.gif" alt="" />
+      <p>
+        <a class="button" href="../index.html"
+          ><span style="background-color: rgb(8, 255, 90)"><</span> ENTER
+          BANGOLAND
+          <span style="background-color: rgb(8, 255, 90)">></span>
+        </a>
+      </p>
+    </aside>
+
+    <main id="popup">
+      <legend>BANGOLAND - SEASON 01</legend>
+      <p>
+        <img src="../images/aniearth.gif" style="width: 20px" alt="" />
+        <b>LINKS </b>
+      </p>
+      <ul>
+        <li>
+          INSTAGRAM
+          <a href="../index.html">[instagram.com]</a>
+        </li>
+        <!-- <li>
+          TELEGRAM
+          <a href="../index.html">[telegram.com]</a>
+        </li> -->
+        <li>X.COM<a href="https://llxi.me/work/">[x.com]</a></li>
+      </ul>
+      <p>
+        <b>-</b>
+      </p>
+      <legend>BANGOLAND PLAYGROUND</legend>
+      <ul>
+        <li>
+          EXPLORE
+          <a href="https://dexscreener.com/">[BANGOLAND]</a>
+        </li>
+        <li>
+          SPOTIFY
+          <a target="_blank" href="https://spotify.com">[spotify.com]</a>
+        </li>
+      </ul>
+      <nav>
+        <span><a href="#" onClick="closePopup()">Ok</a></span>
+        <span><a href="#" onClick="closePopup()">Cancel</a></span>
+      </nav>
+    </main>
+    <div class="backpanel">
+      <button onClick="closePopup(); myFunction()">LINKS</button>
+      <button onClick="myFunction()">BANGO BANGO</button>
+    </div>
+
+    <script>
+      function closePopup() {
+        event.preventDefault();
+        var popup = document.getElementById("popup");
+        popup.classList.toggle("hidden");
+      }
+      function myFunction() {
+        let random = Math.floor(Math.random() * 10);
+        document.body.style.backgroundImage =
+          'url("../images/bgs/' + random + '.png")';
+      }
+    </script>
+  </body>
+</html>

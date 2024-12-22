@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>$MAYNE - DOLLAMAYNE</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>OFFICIAL $MAYNE - DOLLAMAYNE.com - $MAYNE</h1>
+
+    <img class="topright" src="./images/dance-tr.gif" alt="Gears" />
+
+    <img class="bottomleft" src="./images/dance-bl.gif" alt="Gears" />
+
+    <aside id="desktop">
+      <img src="./images/mayne-logo-anim-01b.gif" alt="" />
+      <p>
+        <a class="button" href="https://dexscreener.com/" target="_blank"
+          >CREATE
+          <span style="background-color: rgb(8, 255, 90)"> </span>
+        </a>
+      </p>
+    </aside>
+
+    <main id="popup">
+      <legend>BANGOLAND</legend>
+      <p>
+        <!-- <b>CA: EZDwvexi9tWuduXTsqCNmgQNPpLPpXJySHCX3PNr </b> -->
+      </p>
+      <ul>
+        <!-- <li>
+          TELEGRAM
+          <a href="https://telegram.com">[t.me/dollamayne]</a>
+        </li> -->
+        <li>X.COM<a href="https://llxi.me/work/">[x.com/dollamayne]</a></li>
+        <li>
+          INSTAGRAM
+          <a href="https://archive.llxi.me/">[dexscreener.com]</a>
+        </li>
+        <li>
+          SPOTIFY
+          <a target="_blank" href="https://spotify/">[spotify.com]</a>
+        </li>
+        <li>
+          YOUTUBE
+          <a target="_blank" href="https://spotify/">[spotify.com]</a>
+        </li>
+        <li>
+          <img src="./images/aniearth.gif" style="width: 20px" alt="" />
+
+          <a href="./projects/index.html">[BANGOLAND]</a>
+        </li>
+        <!-- <li>
+          Codepen
+          <a target="_blank" href="https://codepen.io/carterfromsl"
+            >[codepen.io/carterfromsl]</a
+          >
+        </li>
+        <li>
+          Github
+          <a target="_blank" href="https://github.com/carterfromsl"
+            >[github.com/carterfromsl]</a
+          >
+        </li> -->
+      </ul>
+      <nav>
+        <span><a href="#" onClick="closePopup()">Ok</a></span>
+        <span><a href="#" onClick="closePopup()">Cancel</a></span>
+      </nav>
+    </main>
+
+    <div class="backpanel">
+      <button onClick="closePopup()">INFO</button>
+    </div>
+
+    <script>
+      function closePopup() {
+        event.preventDefault();
+        var popup = document.getElementById("popup");
+        popup.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
