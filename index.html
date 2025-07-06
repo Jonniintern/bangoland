@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DOLLARBURGER : $BURGER</title>
+    <title>DOLLARBURGER : $BURGER - LIVE BROADCAST</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/icon.png" />
@@ -9,47 +9,61 @@
   </head>
 
   <body>
-    <h1>dollarburger.fun</h1>
+    <!-- <h1 >dollarburger.fun</h1> -->
 
-    <img class="topright" src="./images/dance-tr.gif" alt="Gears" />
+    <img class="topright logoBtn" src="./images/dance-tr.gif" alt="Gears" />
 
-    <img class="bottomleft" src="./images/dance-bl.gif" alt="Gears" />
+    <img
+      class="bottomleft skullBtn"
+      src="./images/skull2.gif"
+      alt="Gears"
+      id="startBtn"
+    />
+    <audio id="audioPlayer"></audio>
 
     <aside id="desktop">
-      <img src="./images/logo02.gif" alt="" />
-      <p>
-        <a
-          class="button"
-          style="
-            font-size: 30px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          "
-          href="https://dexscreener.com/"
-          target="_blank"
-          >$BURGER
-          <span style="background-color: rgb(8, 255, 90)"> </span>
-        </a>
-      </p>
-      <p>CC dasasdasadsadsadsasd</p>
+      <img class="logoBtn" src="./images/logo02.gif" alt="" />
+      <br />
+      <a
+        style="
+          font-size: 30px;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        "
+        href="https://dexscreener.com/"
+        target="_blank"
+        ><img
+          src="./images/click.gif"
+          style="width: 150px"
+          class="logoBtn"
+          alt=""
+        />
+      </a>
+
       <br />
       <p>
         <a
-          class="button"
+          class="button2"
           style="
             font-size: 17px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           "
           href="https://dexscreener.com/"
           target="_blank"
-          >OFFICAL CARDS
+        >
+          <img src="./images/dolr.gif" style="width: auto" alt="" /><img
+            src="./images/tumblr_mcbnenI0EQ1rgbrd6o1_500.gif"
+            style="width: 50px"
+            alt=""
+          />
+
           <span style="background-color: rgb(8, 255, 90)"> </span>
         </a>
       </p>
-      <p>BUY or TRADE</p>
+      <p>CC dasasdasadsadsadsasd</p>
     </aside>
 
     <main id="popup" class="hidden">
-      <legend>BANGOLAND</legend>
+      <legend>DOLLARBURGER</legend>
       <p>
         <!-- <b>CA: EZDwvexi9tWuduXTsqCNmgQNPpLPpXJySHCX3PNr </b> -->
       </p>
@@ -96,7 +110,7 @@
     </main>
 
     <div class="backpanel">
-      <button onClick="closePopup()">CHAT</button>
+      <button onClick="closePopup()">LINKS</button>
     </div>
 
     <script>
@@ -105,6 +119,32 @@
         var popup = document.getElementById("popup");
         popup.classList.toggle("hidden");
       }
+
+      // Liste over mp3-filer i ./audio/
+      const audioFiles = [
+        "audio/song1.mp3",
+        "audio/song2.mp3",
+        "audio/song3.mp3",
+      ];
+
+      let current = 0;
+      const audio = document.getElementById("audioPlayer");
+      const startBtn = document.getElementById("startBtn");
+
+      function playNext() {
+        audio.src = audioFiles[current];
+        audio.play();
+        current = (current + 1) % audioFiles.length;
+      }
+
+      audio.addEventListener("ended", playNext);
+
+      startBtn.addEventListener("click", () => {
+        playNext(); // Start første sang
+        startBtn.disabled = true; // Deaktiver knappen etter klikk
+        startBtn.textContent = "Spiller...";
+      });
+      // Start første lyd
     </script>
   </body>
 </html>

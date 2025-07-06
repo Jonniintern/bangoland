@@ -44,7 +44,7 @@ html {
 
 body {
   background: var(--bg);
-  background-image: url("./images/burgerbg2.png");
+  background-image: url("./images/nine-c.gif");
   font-family: "Red Hat Mono", monospace;
   position: relative;
   min-height: 90vh;
@@ -426,12 +426,17 @@ input[type="checkbox"] {
 }
 
 .topright,
+.topleft,
 .bottomleft {
-  width: 300px;
+  width: 200px;
   max-width: 42%;
   position: absolute;
   padding: 10px;
   user-select: none;
+}
+
+.topleft {
+  left: 0;
 }
 
 .topright {
@@ -445,4 +450,45 @@ input[type="checkbox"] {
 
 .buybotton {
   width: 40px;
+}
+
+.button2 {
+  /* font-size: 12px;
+  background-image: url("./images/money-2.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+
+  color: var(--black);
+  border: solid 2px rgba(255, 255, 255, 0.616); */
+
+  padding: 0.5em;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.button2:hover {
+  border-radius: 10px;
+
+  scale: 0.9;
+  background-image: url("./images/money-2.gif");
+}
+
+.logoBtn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  background-image: url("./images/rullburg.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.skullBtn:hover {
+  background-image: url("./images/brutez-discord.gif");
+  background-size: contain;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
