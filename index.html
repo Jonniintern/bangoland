@@ -15,7 +15,7 @@
 
     <img
       class="bottomleft skullBtn"
-      src="./images/skull2.gif"
+      src="./images/burgtist.gif"
       alt="Gears"
       id="startBtn"
     />
@@ -24,7 +24,7 @@
     <aside id="desktop">
       <img class="logoBtn" src="./images/logo02.gif" alt="" />
       <br />
-      <a
+      <!-- <a
         style="
           font-size: 30px;
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -37,7 +37,7 @@
           class="logoBtn"
           alt=""
         />
-      </a>
+      </a> -->
 
       <br />
       <p>
@@ -59,7 +59,12 @@
           <span style="background-color: rgb(8, 255, 90)"> </span>
         </a>
       </p>
-      <p>CC dasasdasadsadsadsasd</p>
+      <div>
+        <p class="ccBox" onclick="clickToCopy()" title="Click to copy CA!">
+          <span class="ccText"> CA: </span>
+          <span id="ccAddress">dasasdasadsadsadsasd</span>
+        </p>
+      </div>
     </aside>
 
     <main id="popup" class="hidden">
@@ -72,24 +77,26 @@
           TELEGRAM
           <a href="https://telegram.com">[t.me/dollamayne]</a>
         </li> -->
-        <li>X.COM<a href="https://llxi.me/work/">[x.com/dollamayne]</a></li>
         <li>
           INSTAGRAM
-          <a href="https://archive.llxi.me/">[dexscreener.com]</a>
+          <a href="https://instagram.com/dollarburger">[instagram.com]</a>
         </li>
-        <li>
-          SPOTIFY
-          <a target="_blank" href="https://spotify/">[spotify.com]</a>
-        </li>
+        <li>X.COM<a href="https:x.com/dollarburger_fun">[x.com]</a></li>
         <li>
           YOUTUBE
-          <a target="_blank" href="https://spotify/">[spotify.com]</a>
+          <a target="_blank" href="https://youtube.com/u/dollarburger"
+            >[youtube.com]</a
+          >
         </li>
-        <li>
-          <img src="./images/aniearth.gif" style="width: 20px" alt="" />
+        <li style="text-decoration: line-through; color: gray">
+          TIKTOK
+          <a target="_blank" href="" style="color: gray">[TBA]</a>
+        </li>
+        <li style="text-decoration: line-through; color: gray">
+          SPOTIFY
+          <a target="_blank" href="" style="color: gray">[TBA]</a>
+        </li>
 
-          <a href="./projects/index.html">[BANGOLAND]</a>
-        </li>
         <!-- <li>
           Codepen
           <a target="_blank" href="https://codepen.io/carterfromsl"
@@ -103,14 +110,30 @@
           >
         </li> -->
       </ul>
+      <ul>
+        <li>
+          $BURGER
+          <a target="_blank" href="https://spotify/">[dexscreener.com]</a>
+        </li>
+        <p style="font-size: 12px" onclick="clickToCopy()" class="logoBtn">
+          CC: fjhsdjhkdsfkjhkdsfhjhkjdsfhjksdfhkjsdfhjk
+        </p>
+      </ul>
       <nav>
         <span><a href="#" onClick="closePopup()">Ok</a></span>
         <span><a href="#" onClick="closePopup()">Cancel</a></span>
       </nav>
     </main>
 
-    <div class="backpanel">
-      <button onClick="closePopup()">LINKS</button>
+    <div onClick="closePopup()" class="backpanel">
+      <button>
+        <img
+          style="width: 12px; margin-right: 5px"
+          onClick="closePopup()"
+          src="./images/aniearth.gif"
+          alt=""
+        />LINKS
+      </button>
     </div>
 
     <script>
@@ -122,9 +145,9 @@
 
       // Liste over mp3-filer i ./audio/
       const audioFiles = [
-        "audio/song1.mp3",
-        "audio/song2.mp3",
-        "audio/song3.mp3",
+        "audio/burger01.mp3",
+        "audio/burger01.mp3",
+        "audio/burger03.mp3",
       ];
 
       let current = 0;
@@ -145,6 +168,19 @@
         startBtn.textContent = "Spiller...";
       });
       // Start første lyd
+
+      function clickToCopy() {
+        const ccAddress = document.getElementById("ccAddress");
+        const textToCopy = ccAddress.textContent.trim();
+        navigator.clipboard
+          .writeText(textToCopy)
+          .then(() => {
+            alert("Adresse kopiert: " + textToCopy);
+          })
+          .catch((err) => {
+            console.error("Feil ved kopiering: ", err);
+          });
+      }
     </script>
   </body>
 </html>
