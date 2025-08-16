@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,400;0,600;1,400;1,600&family=Silkscreen:wght@400;700&display=swap");
 
 :root {
-  --bg: #0c8081;
+  --bg: #dd4d4d;
   --white: #bfbfbf;
   --black: #222;
   --red: #bb2323;
@@ -44,7 +44,7 @@ html {
 
 body {
   background: var(--bg);
-  background-image: url("./images/nine-c.gif");
+  background-image: url("./images/bg2.gif");
   font-family: "Red Hat Mono", monospace;
   position: relative;
   min-height: 90vh;
@@ -110,7 +110,9 @@ body::before {
 }
 
 #popup {
-  background: var(--white);
+  background: white;
+  background-image: url("./images/1animated10.gif");
+  background-blend-mode: multiply;
   min-height: 12em;
   width: 36em;
   max-width: calc(100% - 4em);
@@ -321,6 +323,9 @@ input[type="checkbox"] {
 }
 
 #popup li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-style: italic;
   position: relative;
   float: left;
@@ -329,6 +334,16 @@ input[type="checkbox"] {
   border-bottom: 2px solid #999;
   padding: 5px;
   margin: 0;
+  background: #eee;
+}
+
+.samepopup {
+  position: relative;
+  width: 100%;
+  clear: both;
+  margin: 0;
+  padding: 5px;
+  background: #eee;
 }
 
 #popup li:hover {
@@ -437,6 +452,8 @@ input[type="checkbox"] {
 
 .topleft {
   left: 0;
+  width: 150px;
+  margin: 10px;
 }
 
 .topright {
@@ -472,7 +489,7 @@ input[type="checkbox"] {
 .button2:hover {
   border-radius: 10px;
 
-  scale: 0.9;
+  transform: scale(1.05);
   background-image: url("./images/money-2.gif");
 }
 
@@ -480,15 +497,15 @@ input[type="checkbox"] {
   cursor: pointer;
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
-  background-image: url("./images/rullburg.gif");
+  background-image: url("./images/pongy_gif_02.gif");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 .skullBtn:hover {
-  background-image: url("./images/brutez-discord.gif");
   background-size: contain;
+  background-repeat: no-repeat;
   cursor: pointer;
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
@@ -496,10 +513,10 @@ input[type="checkbox"] {
 
 .ccBox {
   background-color: #27272770;
-  color: #eb3b3b;
+  color: #52b32c;
   background-color: white;
-  border: solid 2px rgb(224, 203, 12);
-  border-radius: 5px;
+  padding: 1px 7px;
+  border-radius: 2px;
   cursor: pointer;
 }
 
@@ -513,31 +530,19 @@ input[type="checkbox"] {
   opacity: 0.9;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: default;
+.animated-bg {
+  background-color: #ebebeb;
+  animation: colorAnimation 1s infinite;
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  padding: 0.25em 0.5em;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 0.25em;
-  white-space: nowrap;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 100%;
-  transition-property: visibility;
-  transition-delay: 0s;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  transition-delay: 0.3s;
+@keyframes colorAnimation {
+  0% {
+    background-color: #cccccc7e;
+  }
+  50% {
+    background-color: #000000a2;
+  }
+  100% {
+    background-color: #f4f75e;
+  }
 }
